@@ -1,0 +1,16 @@
+<!--components/list/list.wxml-->
+<view class="item" wx:for="{{feeds}}" wx:key="{{index}}">
+  <navigator url="/pages/user_feed/user_feed?openid={{item.openid}}" class="friend_avatar" style='background-image:url({{item.user_avatar}})'>
+  </navigator>
+  <view class="friend_item">
+    <view class="friend_name">{{item.user_name}}</view>
+    <view class="friend_content">{{item.content}}</view>
+    <view class="friend_img {{item.pic_class}}" wx:if="{{item.img_urls.length}}">
+      <block wx:for="{{item.img_urls}}" wx:for-item="src">
+        <image data-urls="{{item.img_urls}}" data-src="{{src}}" bindtap="preview" lazy-load class="imgs_children" mode="aspectFill" src="{{src}}"></image>
+      </block>
+    </view>
+    <view class="friend_time">{{item.ctime}}</view>
+    <view class="friend_address">{{item.publish_address}}</view>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<view class="container">
+  <form bindsubmit="onSubmit">
+    <textarea name="content" value="{{conVal}}" placeholder="请输入发表的内容" bindinput="onChange"></textarea>
+    <van-cell title="{{addName ? addName : '所在位置'}}" icon="location-o" is-link bind:tap="getAddress" />
+    <view class="upImg">
+
+      <view class="upImgBox" wx:for="{{tempPath}}" wx:key="*this">
+        <image src="{{item}}" bindtap="showBigImg" data-idx="{{index}}" mode="aspectFill"></image>
+        <view class="close" data-idx="{{index}}" bindtap="clickDel">x</view>
+      </view>
+      <view wx:if="{{tempPath.length<9}}" class="upImgPic" bindtap="addImg">+</view>
+    </view>
+    <button type="primary" disabled="{{btnDis}}" form-type="submit">发表动态</button>
+  </form>
+</view>

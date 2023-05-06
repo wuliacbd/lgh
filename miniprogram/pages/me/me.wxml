@@ -1,0 +1,23 @@
+<view class="ykHead">
+  <view class="pic">
+    <block wx:if="{{userInfo}}">
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </block>
+  </view>
+  <view class="username">
+    <block wx:if="{{userInfo}}">{{userInfo.nickName}}</block>
+    <block wx:else>暂未登录</block>
+  </view>
+
+</view>
+<view class="ykMain">
+  <view class="ykCon" wx:if="{{userInfo}}">
+    <van-cell is-link title="我的收藏" link-type="navigateTo" url="/pages/mine/mine" />
+    <van-cell is-link title="我的食谱" link-type="navigateTo" url="/pages/mycp/mycp" />
+    <van-cell is-link title="我的动态" link-type="navigateTo" url="/pages/mydt/mydt" />
+    <van-cell is-link title="联系反馈" link-type="navigateTo" url="/pages/fankui/fankui" />
+  </view>
+  <navigator wx:else class="noLogin" url="/pages/login/login">
+    <button type="primary" bindtap="login">立即登录</button>
+  </navigator>
+</view>

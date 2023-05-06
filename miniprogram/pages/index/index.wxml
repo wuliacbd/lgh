@@ -1,0 +1,39 @@
+<view class="search">
+  <icon type="search" class="search-img" size="13" color="#405f80"></icon>
+  <input type="text" placeholder="输入食谱名称" placeholder-class="placeholder" value="{{wxSearchData}}"
+    bindtap="wxSearchInput" />
+  <image wx:if="{{wxSearchData.value.length > 0}}" bindtap="wxSearchClear" src="/images/xx.png" class="xx-img"></image>
+</view>
+<navigator url="/pages/addcaixi/addcaixi" wx:if="{{admin}}">
+  <button type="primary" bindtap="add">添加菜系</button>
+</navigator>
+<van-tabs active="{{ active }}">
+  <view class="row" wx:for="{{dataList}}" wx:key="index" data-item="{{item}}">
+    <van-tab title="{{item.title}}">
+      <navigator class="caipu" wx:if="{{admin}}" wx:for="{{item.nameList}}"
+        url='/pages/detail/detail?id={{item.nameiiiid}}' bindlongpress="onDel" data-orderno="{{item.nameiiiid}}">
+        <image class="pic" src="{{item.imageurl[0]}}"></image>
+        <view class="txt">
+          <view class="title">{{item.name}}</view>
+          <view class="info">
+            <text>作者：</text><text>{{item.author}}</text><text space="ensp"></text>
+          </view>
+        </view>
+      </navigator>
+      <navigator class="caipu" wx:if="{{!admin}}" wx:for="{{item.nameList}}"
+        url='/pages/detail/detail?id={{item.nameiiiid}}'>
+        <image class="pic" src="{{item.imageurl[0]}}"></image>
+        <view class="txt">
+          <view class="title">{{item.name}}</view>
+          <view class="info">
+            <text>作者：</text><text>{{item.author}}</text><text space="ensp"></text>
+          </view>
+        </view>
+      </navigator>
+    </van-tab>
+  </view>
+</van-tabs>
+<view class="box">
+  <image class="publish" src="cloud://aaa-0gbvpkroa3498da5.6161-aaa-0gbvpkroa3498da5-1305937918/加号.png" bindtap="goto">
+  </image>
+</view>

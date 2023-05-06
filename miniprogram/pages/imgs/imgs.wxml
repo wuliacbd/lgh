@@ -1,0 +1,4 @@
+<!--pages/imgs/imgs.wxml-->
+<view class="saichengbiao">
+<image src="cloud://aaa-0gbvpkroa3498da5.6161-aaa-0gbvpkroa3498da5-1305937918/img-1623564890092f0b9da84eacc14224e53d804a682aa21.jpg"   mode="widthFix"></image>
+</view>

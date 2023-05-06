@@ -1,0 +1,72 @@
+page {
+  background-color: #222;
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #222;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.header {
+  font-size: large;
+  font-weight: bold;
+}
+
+.avatar {
+  height: 180rpx;
+  width: 180rpx;
+  border-radius: 50%;
+  background-color: #222;
+  flex-shrink: 0;
+}
+
+button {
+  background-color: #222;
+  color: white;
+  font-size: medium;
+  font-weight: 500 !important;
+  height: 60rpx !important;
+  width: 300rpx !important;
+  line-height: 50rpx !important;
+  border: 5rpx solid rgb(20, 141, 255);
+  border-radius: 40rpx !important;
+  padding: 5rpx 20rpx !important;
+}
+
+button.hover {
+  background-color: rgb(20, 141, 255);
+  color: #222;
+  font-weight: 900 !important;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}

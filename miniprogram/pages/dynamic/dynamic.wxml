@@ -1,0 +1,29 @@
+<view class="search">
+  <icon type="search" class="search-img" size="13" color="#405f80"></icon>
+  <input type="text" placeholder="输入文章标题" placeholder-class="placeholder" value="{{wxSearchData}}"
+    bindtap="wxSearchInput" />
+  <image wx:if="{{wxSearchData.value.length > 0}}" bindtap="wxSearchClear" src="/images/xx.png" class="xx-img"></image>
+</view>
+<view class="dyMain">
+  <view class="row" wx:for="{{dataList}}" wx:key="index" bindtap="getDetail" data-item="{{item}}">
+    <view class="pic">
+      <image src="{{item.imageurl[0]}}"></image>
+    </view>
+    <view class="txt">
+      <view class="title">{{item.title}}</view>
+      <view class="info">
+        <text>作者：</text><text>{{item.author}}</text><text space="ensp"></text>
+      </view>
+    </view>
+  </view>
+  <navigator class="box" url="/pages/publish/publish" wx:if="{{admin}}">
+    <image class="publish" src="cloud://aaa-0gbvpkroa3498da5.6161-aaa-0gbvpkroa3498da5-1305937918/加号.png"></image>
+  </navigator>
+</view>
+<view class="footer"
+  style="width: 750rpx; height: 186rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+  <image class="pic" mode="widthFix" src="/images/mmexport1621818790115.jpg"
+    style="width: 591rpx; height: 50rpx; display: inline-block; box-sizing: border-box; top: 0rpx; left: NaNrpx">
+  </image>
+  <view class="text"> 为爱而聚，E起前行</view>
+</view>

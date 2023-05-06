@@ -1,0 +1,5 @@
+<!--pages/glories/glories.wxml-->
+<view class="glories" wx:for="{{data}}" wx:key="index" data-item="{{item}}">
+  <view class="glory">{{item.glory}}</view>
+  <image class="img" src="{{item.img}}"></image>
+</view>

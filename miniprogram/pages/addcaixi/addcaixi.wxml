@@ -1,0 +1,7 @@
+<form bindsubmit="onSubmit">
+  <input name="title" class="ipt" placeholder="请输入菜系" />
+  <view class="btnGroup">
+    <button type="primary" form-type="submit">确认发布</button>
+    <button type="primary" plain form-type="reset">重置</button>
+  </view>
+</form>

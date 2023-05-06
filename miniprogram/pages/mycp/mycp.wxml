@@ -1,0 +1,14 @@
+<view class="row" wx:for="{{dataList}}" wx:key="index" bindtap="getDetail" data-item="{{item}}"
+  bindlongpress="handleLongPress">
+
+
+  <view class="pic">
+    <image src="{{item.imageurl[0]}}"></image>
+  </view>
+  <view class="txt">
+    <view class="title">{{item.name}}</view>
+    <view class="info">
+      <text>作者：</text><text>{{item.author}}</text><text space="ensp"></text>
+    </view>
+  </view>
+</view>

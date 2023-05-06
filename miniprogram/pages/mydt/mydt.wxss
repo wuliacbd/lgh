@@ -1,0 +1,155 @@
+page {
+  background: #F7F8FA
+}
+
+.container {
+  padding: 30rpx;
+}
+
+.panCon {
+  padding: 30rpx;
+  font-size: 30rpx;
+}
+
+.panConTxt {
+  padding-bottom: 10rpx;
+}
+
+.panTit {
+  display: flex;
+  align-items: center
+}
+
+.panTit>image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 15rpx;
+}
+
+.panTitText {
+  line-height: 1.2em;
+}
+
+.panTit .info {
+  font-size: 25rpx;
+  color: #888
+}
+
+.panTitText .name text {
+  font-size: 20rpx;
+  color: #aaa;
+}
+
+.ftView {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.ftView .time {
+  font-size: 28rpx;
+  color: #666
+}
+
+.btnGroup van-button {
+  margin-left: 10rpx;
+}
+
+.row {
+  padding-bottom: 30rpx;
+}
+
+.video {
+  width: 100%;
+}
+
+.myLoad {
+  text-align: center;
+  padding: 10rpx;
+}
+
+.floatBtn {
+  position: fixed;
+  right: 80rpx;
+  bottom: 80rpx;
+}
+
+.floatBtn .van-button {
+  width: 120rpx;
+  height: 120rpx;
+  font-size: 50rpx;
+  box-shadow: 0 0 10px rgba(7, 193, 96, 0.7)
+}
+
+
+.popupCon {
+  padding: 60rpx 30rpx 100rpx;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: auto
+}
+
+.popTop {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #fff;
+  font-size: 25rpx;
+  font-weight: 600;
+}
+
+.popBootom {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+.commentItem {
+  padding: 10rpx 0;
+  display: flex;
+  justify-content: space-between
+}
+
+.commPic {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  overflow: hidden
+}
+
+.commPic image {
+  width: 100%;
+  height: 100%
+}
+
+.commMain {
+  width: 610rpx;
+}
+
+.commMain .nickname {
+  font-size: 25rpx;
+  color: #888;
+  display: flex;
+  justify-content: space-between
+}
+
+.commMain .content {
+  font-size: 28rpx;
+  padding: 10rpx 0 15rpx;
+}
+
+
+.panClose {
+  font-size: 32rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+  color: #ccc
+}

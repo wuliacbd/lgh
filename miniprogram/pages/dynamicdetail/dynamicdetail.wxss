@@ -1,0 +1,292 @@
+.form {
+  width: 94%;
+  margin: 0 auto;
+}
+
+.input-style {
+  width: 70%;
+  height: 40px;
+  border-radius: 25px;
+  background: #f3f3f5;
+  font-size: 14px;
+  /* text-indent: 15px; */
+  padding-left: 15px;
+  float: left;
+  color: #808286;
+}
+
+.message .btn {
+  width: 20%;
+  font-size: 14px;
+  float: right;
+  border-radius: 10px;
+  color: #2c3036;
+  background: #f3f3f5;
+  letter-spacing: 2px;
+}
+
+.liuyanview {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.result {
+  text-align: center;
+  font-size: 14px;
+  color: #f00;
+  margin-top: 20px;
+}
+
+.headimg {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+}
+
+.headimg image {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+}
+
+.nickname_liuyantext {
+  width: calc(100% - 55px);
+  float: right;
+  margin-top: -45px;
+}
+
+.nickname_liuyantext .nickname {
+  font-size: 15rpx;
+  color: #999;
+}
+
+.nickname_liuyantext .nickname .time {
+  font-size: 11rpx;
+  color: #999;
+  float: right;
+}
+
+.nickname_liuyantext .text {
+  font-size: 16rpx;
+  color: #666;
+}
+
+.message {
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  padding: 10rpx auto;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+}
+
+/* 全部评论 */
+.allMessage {
+  clear: both;
+  width: 92%;
+  margin: 0 auto;
+  padding: 4%;
+  background-color: #fff;
+  padding-bottom: 120rpx;
+}
+
+.allMessage .title {
+  border-left: 5rpx solid #2c3036;
+  /* margin: 12px 0; */
+  height: 20rpx;
+  line-height: 20rpx;
+  text-indent: 10rpx;
+  color: #2c3036;
+  font-size: 18rpx;
+  margin-bottom: 10rpx;
+}
+
+.allMessage .comment-item {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 16rpx 0;
+  border-bottom: 1px solid #f3f3f5;
+}
+
+.allMessage .comment-person {
+  display: flex;
+  align-items: center;
+}
+
+.comment-person-info {
+  flex: 1;
+}
+
+.comment-cAvatarUrl {
+  height: 26rpx;
+  width: 26rpx;
+  border-radius: 50%;
+}
+
+.comment-person-name {
+  font-size: 40rpx;
+  font-weight: 800;
+  color: #2c3036;
+}
+
+.comment-time {
+  font-size: 20rpx;
+  color: #808286;
+}
+
+.comment-text {
+  font-size: 14rpx;
+  color: #2c3036;
+  line-height: 25rpx;
+  padding: 24rpx 0 0 20rpx;
+}
+
+.animal_collect {
+  flex: 3;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.part {
+  background-color: #fff;
+  width: 100%;
+  overflow: hidden;
+  border: 1rpx solid #f1f1f1;
+  margin: 9rpx 0;
+}
+
+.in-part {
+  padding: 0 29rpx;
+}
+
+.art-palette {
+  font-size: 14rpx;
+  color: #aaa;
+  position: relative;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.art-palette:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: -5rpx;
+  left: -1rpx;
+}
+
+.auth-name {
+  color: #444;
+
+  font-size: 30rpx;
+}
+
+.art-time {
+  margin: 0 0rpx 0 0rpx;
+  font-size: 15rpx;
+}
+
+.article {
+  padding: 30rpx 0 50rpx;
+  font-size: 14rpx;
+  overflow: hidden;
+  color: #333;
+}
+
+.like-box {
+  margin: 30rpx 0;
+}
+
+.like-box .btn-like {
+  display: block;
+  margin: 0 auto;
+  width: 78rpx;
+  height: 78rpx;
+  border: 1rpx solid #aaa;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.comment-author {
+  font-size: 30rpx;
+}
+
+.comment-block {
+  padding: 20rpx 0;
+  border-top: 1rpx solid #ddd;
+  display: flex;
+  align-items: flex-start;
+  font-size: 14rpx;
+}
+
+.comment-avatar {
+  width: 48rpx;
+  flex: 0 0 auto;
+  margin-right: 10rpx;
+  padding-top: 5rpx;
+}
+
+.comment-section {
+  flex: 1 1 auto;
+}
+
+.comment-info {
+  margin-bottom: 5rpx;
+}
+
+.comment-content {
+  color: rgba(0, 0, 0, .65);
+  line-height: 2.0;
+  padding-bottom: 10rpx;
+  word-break: break-all;
+  font-size: 20rpx;
+}
+
+.comment-bottom {
+  font-size: 32rpx;
+  color: rgba(0, 0, 0, .6);
+  display: flex;
+  align-items: center;
+}
+
+.comment-avatar .avatar {
+  border-radius: 100%;
+  height: 40rpx;
+  aspect-ratio: auto 40 / 40;
+  width: 40rpx;
+}
+
+.comment-bottom .comment-delete {
+  transition: color .5s;
+}
+
+.comment-delete {
+  cursor: pointer;
+  margin-left: 40rpx;
+}
+
+.input {
+  width: 600rpx;
+  border: 1rpx solid #f1f1f1;
+  margin: 12rpx 0rpx 12rpx 20rpx;
+  border-radius: 30rpx;
+  background: #f1f5fc;
+  font-size: 25rpx;
+  text-align: center;
+}
+
+.button {
+  background: #6fb442;
+  color: white;
+  border-radius: 30rpx;
+  font-size: 30rpx;
+  width: 130rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12rpx 20rpx;
+}

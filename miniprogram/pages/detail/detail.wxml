@@ -1,0 +1,87 @@
+<view class="a" wx:for="{{dataList}}" wx:key="index">
+  <view class="part">
+    <view class="in-part">
+      <h1 class="art-tit">{{item.name}}</h1>
+      <view class="art-palette">
+        <view class="auth-name">作者：{{item.author}}</view>
+        <view class="art-time">{{item.time}}</view>
+      </view>
+      <view class="container">
+        <swiper class="home-swiper" indicator-dots="true" autoplay="{{autoplay}}" interval="{{interval}}"
+          duration="{{duration}}">
+          <block wx:for-items="{{item.imageurl}}">
+            <swiper-item>
+              <image src="{{item}}" class="slide-image" />
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+      <view class="">
+
+      </view>
+      <text>需要的酱料有</text>
+      <view>{{item.jiang}}</view>
+      <text>需要的材料有</text>
+      <view>{{item.food}}</view>
+      <text>步骤：</text>
+      <view class="article" id="article" style="font-size: 14px; text-align: center;">
+
+        <view class="a" wx:for="{{item.steps}}" wx:key="s">
+          <view>{{item.con}}</view>
+          <image src="{{item.picUrl}}"></image>
+        </view>
+
+      </view>
+      <view class="like-box">
+        <block wx:if="{{shoucang==false}}">
+          <image class="btn-like" bindtap="ClickSC"
+            src="https://6161-aaa-0gbvpkroa3498da5-1305937918.tcb.qcloud.la/%E6%94%B6%E8%97%8F%20(1).png?sign=bb0d790bf5eedf5614d337b911dc9d12&t=1629456895">
+          </image>
+        </block>
+        <block wx:if="{{shoucang==true}}">
+          <image class="btn-like" bindtap="ClickSC"
+            src="https://6161-aaa-0gbvpkroa3498da5-1305937918.tcb.qcloud.la/%E6%94%B6%E8%97%8F.png?sign=dc43321fbe7725401d6e6278b8c98deb&t=1629456914">
+          </image>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="allMessage">
+  <view>全部评论</view>
+  <view class="comment-block" wx:for="{{commenList}}" wx:key="index">
+    <view class="comment-avatar">
+      <image src="{{item.cAvatarUrl}}" class="avatar"></image>
+    </view>
+    <view class="comment-section">
+      <view class="comment-info">
+        <view class="comment-meta">
+          <view itemprop="author" class="comment-author">
+            <view>{{item.cNickName}}</view>
+          </view>
+        </view>
+      </view>
+      <view itemprop="description" class="comment-content">
+        <view>{{item.comment}}</view>
+      </view>
+      <view class="comment-bottom">
+        <view itemprop="datePublished" class="comment-time">{{item.createDate}}</view>
+        <view class="delete1" wx:if="{{admin}}">
+          <view class="comment-delete" data-deleteid="{{item._id}}" bindtap="deleteClick">删除</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<van-notice-bar mode="closeable" text="请不要相信其他人的诈骗" />
+<view class="padding-0 bg-white" id='comment'>
+  <form bindsubmit="formSubmit">
+    <view class="flex "
+      style="width: 750rpx; height: 57rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+      <input class='input' type='text' placeholder='我来评论' name='comment'
+        style="width: 458rpx; height: -19rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"></input>
+      <button class='button' form-type='submit' open-type='getUserInfo'
+        style="position: relative; left: 240rpx; top: -61rpx; width: 221rpx; height: 50rpx; display: flex; box-sizing: border-box">发送</button>
+    </view>
+  </form>
+</view>

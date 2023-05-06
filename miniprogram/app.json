@@ -1,0 +1,74 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/search/search",
+    "pages/suiji/suiji",
+    "pages/publish/publish",
+    "pages/login/login",
+    "pages/mine/mine",
+    "pages/fankui/fankui",
+    "pages/addcaixi/addcaixi",
+    "pages/me/me",
+    "pages/detail/detail",
+    "pages/pengyouquan/index",
+    "pages/mycp/mycp",
+    "pages/mydt/mydt",
+    "pages/addstep/addstep"
+    
+  ],
+    "usingComponents": { 
+      "van-loading": "@vant/weapp/loading/index",
+      "van-notify": "@vant/weapp/notify/index"
+    },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarTitleText": "想吃什么有什么",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar":{
+    "list":[{
+      "pagePath" : "pages/index/index" ,
+      "text":"食谱交流"
+    },
+    {
+      "pagePath": "pages/suiji/suiji",
+      "text":"随机选餐"
+    },
+    {
+      "pagePath" : "pages/pengyouquan/index",
+      "text":"全部动态"
+    },
+    {
+      "pagePath" : "pages/me/me",
+      "text":"关于我的"
+    }
+]},
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "usingComponents":{
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-panel": "@vant/weapp/panel/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-icon": "@vant/weapp/icon/index"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "将会获取你的位置"
+    }
+  }
+}

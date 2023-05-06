@@ -1,0 +1,17 @@
+<!--pages/addsteps/addsteps.wxml-->
+<form bindsubmit="onSubmit">
+  <view class="top">一次只可以添加一次步骤哦</view>
+  <textarea name="content" class="area" placeholder="请输入操作步骤"
+    style="position: relative; left: 0rpx; top: -10rpx"> </textarea>
+  <view>展示一下该步骤完成后的图</view>
+  <view class="upImg">
+
+    <view class="upImgBox" wx:for="{{tempPath}}" wx:key="*this">
+      <image src="{{item}}" bindtap="showBigImg" data-idx="{{index}}" mode="aspectFill"></image>
+      <view class="close" data-idx="{{index}}" bindtap="clickDel">x</view>
+    </view>
+    <view wx:if="{{tempPath.length<9}}" class="upImgPic" bindtap="addImg">+</view>
+  </view>
+
+  <button type="primary" form-type="submit">发表</button>
+</form>

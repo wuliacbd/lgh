@@ -1,0 +1,114 @@
+<wxs module="public" src="../../wxs/public.wxs" />
+<view class="container">
+  <van-row>
+    <van-col span="24">
+
+
+      <view class="row" wx:for="{{dataList}}" wx:key="index">
+        <van-cell border="{{false}}">
+          <view slot="title">
+            <view class="panTit">
+              <image src="{{item.userInfo.avatarUrl}}"></image>
+              <view class="panTitText">
+                <view class="name">
+                  {{item.userInfo.nickName}}
+                  <text wx:if="{{item.addname}}">· {{item.addname}}</text>
+                </view>
+                <view class="info">来源：{{item.phone}}</view>
+              </view>
+              <van-icon data-id="{{item._id}}" data-index="{{index}}" wx:if="{{admin}}" bindtap="clickDel"
+                class="panClose" name="cross" />
+            </view>
+          </view>
+        </van-cell>
+        <van-panel use-footer-slot>
+          <view class="panCon">
+            <view class="panConTxt">{{item.content}}</view>
+
+            <image class="pic" wx:if="{{item.picUrl}}" src="{{item.picUrl[0]}}"></image>
+
+
+          </view>
+
+
+          <view slot="footer">
+            <view class="ftView">
+              <view class="time">{{public.timesFun(item.posttime)}}</view>
+              <view class="btnGroup">
+                <van-button bindtap="clickZan" data-id="{{item._id}}" data-idx="{{index}}" size="small"
+                  icon="good-job-o" type="primary" plain="{{item.isZan}}">
+                  <block wx:if="{{item.zanSize}}">{{public.numSubstr(item.zanSize)}}</block>
+                  <block wx:else>点赞</block>
+
+                </van-button>
+                <van-button data-id="{{item._id}}" data-idx="{{index}}" bindtap="clickComment" size="small"
+                  icon="comment-o" type="info" plain>
+                  <block wx:if="{{item.commNum}}">{{public.numSubstr(item.commNum)}}</block>
+                  <block wx:else>评论</block>
+                </van-button>
+              </view>
+            </view>
+
+          </view>
+        </van-panel>
+      </view>
+
+
+
+
+
+    </van-col>
+  </van-row>
+  <view class="myLoad">
+    <van-loading size="20px" type="spinner" wx:if="{{isLoading}}">
+      数据加载中...
+    </van-loading>
+    <van-divider wx:else contentPosition="center" customStyle="color: #999;border-color: #ccc;font-size: 14;">已经到底了~~
+    </van-divider>
+  </view>
+</view>
+
+<van-button round icon="plus" type="primary" class="floatBtn" bind:tap="addBlogBtn"></van-button>
+
+<van-popup show="{{ popupShow }}" bind:close="popupClose" position="bottom" custom-style="height:60%" round>
+
+  <view class="popupCon">
+    <block wx:if="{{commentLoading}}">
+      <view class="popTop">{{commentList.length}}条评论</view>
+      <view class="popMain">
+        <block wx:if="{{commentList.length}}">
+          <view wx:for="{{commentList}}" wx:key="*this" class="commentItem">
+            <view class="commPic">
+              <image src="{{item.userInfo.avatarUrl}}"></image>
+            </view>
+            <view class="commMain">
+              <view class="nickname">
+                <view>{{item.userInfo.nickName}}</view>
+                <view>{{public.timesFun(item.posttime)}}</view>
+              </view>
+              <view class="content">{{item.content}}</view>
+            </view>
+          </view>
+        </block>
+        <block wx:else>
+          <view style="color:#999; font-size:36rpx; text-align:center; padding-top:50rpx;">暂无评论，赶紧抢沙发吧~~</view>
+        </block>
+      </view>
+    </block>
+    <block wx:else>
+      <view style="text-align:center; padding-top:100rpx">
+        <van-loading type="spinner" color="#07C160" />
+      </view>
+    </block>
+    <view class="popBootom">
+      <van-cell-group>
+        <van-field value="{{ commentVal }}" clearable placeholder="请输入评论内容" border="{{ false }}" use-button-slot
+          bind:input="commentIpt">
+          <van-button slot="button" bindtap="clickBtnComment" size="small" type="primary" disabled="{{commentShow}}">评论
+          </van-button>
+        </van-field>
+      </van-cell-group>
+    </view>
+  </view>
+
+</van-popup>
