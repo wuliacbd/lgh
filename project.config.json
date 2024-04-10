@@ -38,8 +38,8 @@
     "minifyWXSS": true
   },
   "appid": "wxe6e85846ff8ed992",
-  "projectname": "biegaole",
-  "libVersion": "2.19.1",
+  "projectname": "人人食谱",
+  "libVersion": "2.31.0",
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "search": {
